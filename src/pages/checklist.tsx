@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Lock } from "lucide-react";
-import IoTSecurityChecklist from '@/components/IoTSecurityChecklist';
-import SEOHead from '@/components/SEOHead';
-import { EmailGate } from '@/components/EmailGate';
+import IoTSecurityChecklist from '@/components/iotsecuritychecklist';
+import SEOHead from '@/components/seohead';
+import { EmailGate } from '@/components/emailgate';
 
 const Checklist = () => {
   const [hasAccess, setHasAccess] = useState(false);
