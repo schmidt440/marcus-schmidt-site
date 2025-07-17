@@ -6,16 +6,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
-import { Header } from "@/components/Header";
-import Index from "./pages/Index";
-import Auth from "./pages/Auth";
-import BlogListing from "./pages/BlogListing";
-import BlogPost from "./components/BlogPost";
-import Checklist from "./pages/Checklist";
-import Course from "./pages/Course";
-import CourseAccess from "./pages/CourseAccess";
-import Quiz from "./pages/Quiz";
-import "./App.css";
+import { Header } from "@/components/header";
+import Index from "./pages/index";
+import Auth from "./pages/auth";
+import BlogListing from "./pages/bloglisting";
+import BlogPost from "./components/blogpost";
+import Checklist from "./pages/checklist";
+import Course from "./pages/course";
+import CourseAccess from "./pages/courseaccess";
+import Quiz from "./pages/quiz";
+import "./app.css";
 
 const queryClient = new QueryClient();
 
