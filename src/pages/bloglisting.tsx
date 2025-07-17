@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Calendar, Clock, ArrowLeft } from "lucide-react";
-import { blogPosts } from '@/data/blogPosts';
-import SEOHead from '@/components/SEOHead';
+import { blogPosts } from '@/data/blogposts';
+import SEOHead from '@/components/seohead';
 
 const BlogListing = () => {
   return (
