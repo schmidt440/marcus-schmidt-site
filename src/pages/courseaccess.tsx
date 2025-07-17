@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '@/hooks/useauth';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookOpen, Clock, CheckCircle, Lock } from 'lucide-react';
-import { courseModules } from '@/data/courseModules';
+import { courseModules } from '@/data/coursemodules';
 
 const CourseAccess = () => {
   const { user } = useAuth();
