@@ -8,10 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, BookOpen, Mic, Mail, ExternalLink, Calendar, User, Shield, Download, Clock, CheckCircle, Star, Building } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { blogPosts } from '@/data/blogPosts';
-import SEOHead from '@/components/SEOHead';
-import { EmailGate } from '@/components/EmailGate';
-import CountdownTimer from '@/components/CountdownTimer';
+import { blogPosts } from '@/data/blogposts';
+import SEOHead from '@/components/seohead';
+import { EmailGate } from '@/components/emailgate';
+import CountdownTimer from '@/components/dountdownTimer';
 
 const Index = () => {
   const [email, setEmail] = useState('');
