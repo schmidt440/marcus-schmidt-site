@@ -38,3 +38,8 @@ export const blogPosts: BlogPost[] = [
     keywords: ["cellular IoT", "network security", "iot business value", "aeris"]
   }
 ];
+
+// ✅ Fix for blogpost.tsx
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find((post) => post.slug === slug);
+}
