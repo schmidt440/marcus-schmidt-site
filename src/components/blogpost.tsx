@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, Share2, ExternalLink } from "lucide-react";
-import { getBlogPostBySlug } from '@/data/blogPosts';
+import { getBlogPostBySlug } from '@/data/blogposts';
 import SEOHead from './seohead'; // ✅ lowercase to match seohead.tsx
 import { EmailGate } from './emailgate';
 import IoTSecurityChecklist from './iotsecuritychecklist';
