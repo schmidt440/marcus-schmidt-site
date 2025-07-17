@@ -12,7 +12,7 @@ export interface BlogPost {
   keywords: string[];
 }
 
-export const blogPosts: blogpost[] = [
+export const blogposts: blogpost[] = [
   {
     id: "1",
     slug: "stop-chasing-ghosts-cellular-network-embrace-iot",
