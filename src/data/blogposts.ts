@@ -21,25 +21,26 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>In today’s rapidly evolving technological landscape, many organizations find themselves chasing theoretical IoT implementations that never quite materialize into tangible business value. The reality is that cellular networks offer a stable, scalable, and highly accessible foundation for deploying impactful IoT solutions—today, not tomorrow.</p>
 
-      <h2>The Ghost Problem</h2>
-      <p>Too many companies are pursuing IoT strategies based on outdated assumptions about cellular network limitations. These “ghost” projects consume resources without delivering measurable outcomes because they’re built on shaky ground—custom protocols, complex Wi-Fi setups, or proprietary platforms that don’t scale or secure easily.</p>
+      <h2>The Ghost Problem in IoT</h2>
+      <p>IT leaders and innovation teams often delay deployment, waiting for perfect use cases. But delaying results in stagnation. This blog breaks down how to build around existing cellular infrastructure and get started now.</p>
 
-      <h2>Embracing Practical Cellular IoT</h2>
-      <p>Modern cellular networks offer unprecedented reliability, coverage, and cost-effectiveness for IoT deployments. By focusing on practical implementations that leverage existing cellular infrastructure, organizations can reduce time-to-market, improve security, and future-proof their operations.</p>
-
-      <h2>The Payoff</h2>
-      <p>Deploying real-world IoT solutions on cellular networks helps organizations monitor assets in real time, automate workflows, and reduce operational costs. Instead of chasing ghosts, you’ll be chasing ROI.</p>
+      <h2>What You’ll Learn</h2>
+      <ul>
+        <li>Why “ghost chasing” slows your IoT roadmap</li>
+        <li>The ROI of choosing proven cellular solutions</li>
+        <li>Case studies of real-world IoT wins</li>
+      </ul>
     `,
-    date: "2025-07-17",
-    readTime: "4 min read",
-    seoTitle: "Stop Chasing IoT Ghosts – Realize ROI with Cellular",
-    seoDescription:
-      "Learn how to stop wasting time on theoretical IoT and start driving value with secure, scalable cellular IoT deployments today.",
-    keywords: ["cellular IoT", "network security", "iot business value", "aeris"]
-  }
+    date: "2024-11-15",
+    readTime: "4 min",
+    seoTitle: "Embrace Cellular IoT Now",
+    seoDescription: "Learn how to stop chasing theoretical IoT models and implement real cellular network solutions.",
+    keywords: ["cellular IoT", "network", "iot security"],
+  },
+  // You can add more posts here
 ];
 
-// ✅ Fix for blogpost.tsx
+// ✅ Fix: Add this missing export for Vercel to stop failing
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
