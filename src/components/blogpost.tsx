@@ -1,10 +1,9 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, Clock, Share2, ExternalLink } from "lucide-react";
 import { getBlogPostBySlug } from '@/data/blogPosts';
-import SEOHead from './SEOHead';
+import SEOHead from './seohead'; // ✅ lowercase to match seohead.tsx
 import { EmailGate } from './EmailGate';
 import IoTSecurityChecklist from './IoTSecurityChecklist';
 
@@ -124,7 +123,6 @@ const BlogPost = () => {
                       description="Get your comprehensive IoT security checklist and join 5,000+ professionals receiving weekly IoT insights."
                       downloadName="IoT Security Checklist"
                     />
-
                   </CardContent>
                 </Card>
 
