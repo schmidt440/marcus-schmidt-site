@@ -1,71 +1,35 @@
+import './app.css';
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import { AuthProvider, useAuth } from "@/hooks/useAuth";
-import { Header } from "@/components/Header";
-import Index from "./pages/Index";
-import Auth from "./pages/Auth";
-import BlogListing from "./pages/BlogListing";
-import BlogPost from "./components/BlogPost";
-import Checklist from "./pages/Checklist";
-import Course from "./pages/Course";
-import CourseAccess from "./pages/CourseAccess";
-import Quiz from "./pages/Quiz";
-import "./App.css";
+export default function App() {
+  return (
+    <main className="main-hero">
+      <header className="navbar">
+        <h1>IoT Security Hub</h1>
+        <nav>
+          <a href="#">Blog</a>
+          <a href="#">IoT Course</a>
+          <a href="#">Security Checklist</a>
+        </nav>
+      </header>
 
-const queryClient = new QueryClient();
+      <section className="hero-banner">
+        <img src="/profile.jpg" alt="Marcus Schmidt" className="avatar" />
+        <div className="tagline">THE NETWORK YOU SEE IS ONLY HALF THE STORY…</div>
+      </section>
 
-const AppContent = () => {
-  const { user, loading } = useAuth();
+      <h2>IoT Security Consultant & Cellular IoT Advisor helping enterprises implement scalable connected solutions</h2>
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+      <div className="badges">
+        <span>IoT Security</span>
+        <span>Cellular IoT</span>
+        <span>Enterprise IoT</span>
+        <span>Digital Transformation</span>
       </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/blog" element={<BlogListing />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/checklist" element={<Checklist />} />
-        <Route path="/course-access" element={<CourseAccess />} />
-        <Route path="/course/:moduleId" element={<Course />} />
-        <Route path="/course/:moduleId/quiz" element={<Quiz />} />
-        <Route 
-          path="/auth" 
-          element={user ? <Navigate to="/" replace /> : <Auth />} 
-        />
-      </Routes>
-    </div>
+      <div className="cta-buttons">
+        <button className="dark-btn">Get Free IoT Security Guide</button>
+        <button className="light-btn">LinkedIn Profile</button>
+      </div>
+    </main>
   );
-};
-
-const App = () => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <HelmetProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <AppContent />
-            </BrowserRouter>
-          </TooltipProvider>
-        </HelmetProvider>
-      </AuthProvider>
-    </QueryClientProvider>
-  );
-};
-
-export default App;
+}
